@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    
+
+    Book b0 = new Book();
     Book b1 = new Book( 1, "One", 111, "mr. First");
     Book b2 = new Book( 2, "Two", 222, "mr. Second");
     Book b1copy = new Book( 1, "One", 111, "mr. First");

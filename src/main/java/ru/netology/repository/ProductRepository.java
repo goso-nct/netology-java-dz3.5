@@ -11,7 +11,7 @@ public class ProductRepository {
   }
 
   public void save(Product item) {
-    if (findById(item.getId()) == null ) {
+    if (item != null && findById(item.getId()) == null ) {
       Product[] tmp = new Product[storage.length + 1];
       System.arraycopy(storage, 0, tmp, 0, storage.length);
       tmp[tmp.length - 1] = item;
@@ -19,7 +19,7 @@ public class ProductRepository {
     }
   }
 
-  public Product[] getAll() {
+  public Product[] findAll() {
     return storage;
   }
 
@@ -47,7 +47,7 @@ public class ProductRepository {
   }
 
   // for tests:
-  void setStorage(Product[] storage) {
+  public void setStorage(Product[] storage) {
     this.storage = storage;
   }
 

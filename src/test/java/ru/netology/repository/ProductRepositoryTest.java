@@ -29,7 +29,7 @@ class ProductRepositoryTest {
         actual.save(s2);
         assertEquals(3, actual.size());
         expected.setStorage(new Product[]{b1, s1, s2});
-        assertArrayEquals(expected.getAll(), actual.getAll());
+        assertArrayEquals(expected.findAll(), actual.findAll());
     }
 
     @Test
@@ -58,7 +58,7 @@ class ProductRepositoryTest {
         actual.removeById(s1.getId());
         assertEquals(4, actual.size());
         expected.setStorage(new Product[]{b1, b2, s4, s5});
-        assertArrayEquals(expected.getAll(), actual.getAll());
+        assertArrayEquals(expected.findAll(), actual.findAll());
     }
 
     @Test

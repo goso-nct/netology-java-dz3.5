@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SmartphoneTest {
 
+    Smartphone s0 = new Smartphone();
     Smartphone s1 = new Smartphone(1, "one", 111, "Samsung" );
     Smartphone s2 = new Smartphone(2, "two", 222, "Apple" );
     Smartphone s1copy = new Smartphone(1, "one", 111, "Samsung" );
