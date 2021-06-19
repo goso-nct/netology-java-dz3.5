@@ -36,4 +36,9 @@ class BookTest {
         String actual = b1.getAuthor();
         assertEquals(expected, actual);
     }
-}
+
+    @Test
+    public void toString_shouldUseOverrided() {
+        Product p = b1;
+        assertEquals(p.toString(), b1.toString());
+    }}
